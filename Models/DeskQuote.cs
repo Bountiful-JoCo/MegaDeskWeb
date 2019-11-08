@@ -34,6 +34,7 @@ namespace MegaDeskWeb.Models
         public int RushOrderDays { get; set; }
         [Required]
         public string DeskMaterial { get; set; }
+        [Display(Name="Quote Date")]
         [DataType(DataType.Date)]
         public DateTime QuoteDate { get; set; }
 

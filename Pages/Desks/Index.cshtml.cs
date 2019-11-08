@@ -37,7 +37,7 @@ namespace MegaDeskWeb.Pages.Desks
                 customers = customers.Where(c => c.LastName.Contains(searchString));
             }
           
-            //Sorting my scriptures by date and book
+            //Sorting quotes by date and name
             CustomerSort = String.IsNullOrEmpty(sortOrder) ? "customer_desc" : "";
             DateSort = sortOrder == "Date" ? "date_desc" : "Date";
             switch (sortOrder)

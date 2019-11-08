@@ -36,23 +36,49 @@
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.Drawers" class="control-label"></label>
-                <input asp-for="DeskQuote.Drawers" class="form-control" />
+                <select asp-for="DeskQuote.Drawers" class="form-control">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
                 <span asp-validation-for="DeskQuote.Drawers" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.RushOrderDays" class="control-label"></label>
-                <input asp-for="DeskQuote.RushOrderDays" class="form-control" />
+                <radiogroup>
+                    
+                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="0" class="form-control"  />Standard<br />
+                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="3" class="form-control" />3 Day Rush<br />
+                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="5" class="form-control" />5 Day Rush<br />
+                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="7" class="form-control" />7 Day Rush<br />
+                </radiogroup>
                 <span asp-validation-for="DeskQuote.RushOrderDays" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DeskQuote.DeskMaterial" class="control-label"></label>
-                <input asp-for="DeskQuote.DeskMaterial" class="form-control" />
+                <label asp-for="DeskQuote.DeskMaterial" class="control-label"></label><br/>
+                <radiogroup>
+                    <img src="~/img/laminate.png" alt="Laminate Photo" />
+                    <input type="radio" asp-for="DeskQuote.DeskMaterial" value="Laminate" />Laminate<br />
+                    <img src="~/img/oak.png" alt="Oak Photo" />
+                    <input type="radio" asp-for="DeskQuote.DeskMaterial" value="Oak" />Oak<br />
+                    <img src="~/img/rosewood.png" alt="Rosewood Photo" />
+                    <input type="radio" asp-for="DeskQuote.DeskMaterial" value="Rosewood" />Rosewood<br />
+                    <img src="~/img/pine.png" alt="Pine Photo"/>
+                    <input type="radio" asp-for="DeskQuote.DeskMaterial" value="Pine" />Pine<br />
+                    <img src="~/img/veneer.png" alt="Veneer Photo"/>
+                    <input type="radio" asp-for="DeskQuote.DeskMaterial" value="Veneer" />Veneer<br />
+                </radiogroup>
                 <span asp-validation-for="DeskQuote.DeskMaterial" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DeskQuote.QuoteDate" class="control-label"></label>
-                <input asp-for="DeskQuote.QuoteDate" class="form-control" />
-                <span asp-validation-for="DeskQuote.QuoteDate" class="text-danger"></span>
+               
+                <input type="hidden" asp-for="DeskQuote.QuoteDate" class="form-control" />
+               
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
