@@ -33,6 +33,7 @@ namespace MegaDeskWeb.Models
         [Display(Name = "Rush Order")]
         public int RushOrderDays { get; set; }
         [Required]
+        [Display(Name=" Surface Material")]
         public string DeskMaterial { get; set; }
         [Display(Name="Quote Date")]
         [DataType(DataType.Date)]

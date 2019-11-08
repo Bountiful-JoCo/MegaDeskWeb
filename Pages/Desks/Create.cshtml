@@ -2,16 +2,16 @@
 @model MegaDeskWeb.Pages.Desks.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Build Your Own Custom Desk Quote";
 }
 
-<h1>Create</h1>
+<h1>Build Your Own Custom Quote</h1><br/>
 
-<h4>DeskQuote</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
+            <h5>Customer Information</h5>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="DeskQuote.LastName" class="control-label"></label>
@@ -23,6 +23,7 @@
                 <input asp-for="DeskQuote.FirstName" class="form-control" />
                 <span asp-validation-for="DeskQuote.FirstName" class="text-danger"></span>
             </div>
+            <h5>Desk Specifications</h5>
             <div class="form-group">
                 <label asp-for="DeskQuote.Width" class="control-label"></label>
                 <input asp-for="DeskQuote.Width" class="form-control" />
@@ -48,17 +49,7 @@
                 <span asp-validation-for="DeskQuote.Drawers" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DeskQuote.RushOrderDays" class="control-label"></label><br />
-                 <radiogroup>
-                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="0" class="form-control" />Standard<br />
-                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="3" class="form-control" />3 Day Rush<br />
-                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="5" class="form-control" />5 Day Rush<br />
-                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="7" class="form-control" />7 Day Rush<br />
-                 </radiogroup>
-                <span asp-validation-for="DeskQuote.RushOrderDays" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeskQuote.DeskMaterial" class="control-label"></label><br/>
+                <label asp-for="DeskQuote.DeskMaterial" class="control-label"></label><br />
                 <radiogroup>
                     <img src="~/img/laminate.png" alt="Laminate Photo" />
                     <input type="radio" asp-for="DeskQuote.DeskMaterial" value="Laminate" />Laminate<br />
@@ -73,16 +64,28 @@
                 </radiogroup>
                 <span asp-validation-for="DeskQuote.DeskMaterial" class="text-danger"></span>
             </div>
-           
+            <h5> Shipping Preferences</h5>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+               @* <label asp-for="DeskQuote.RushOrderDays" class="control-label"></label><br />*@
+                <radiogroup>
+                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="0" class="form-control" />Standard<br />
+                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="3" class="form-control" />3 Day Rush<br />
+                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="5" class="form-control" />5 Day Rush<br />
+                    <input type="radio" asp-for="DeskQuote.RushOrderDays" value="7" class="form-control" />7 Day Rush<br />
+                </radiogroup>
+                <span asp-validation-for="DeskQuote.RushOrderDays" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Build Your Quote" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Return to Quotes</a>
 </div>
 
 @section Scripts {

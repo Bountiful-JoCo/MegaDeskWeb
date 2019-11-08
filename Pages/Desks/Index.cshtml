@@ -2,15 +2,12 @@
 @model MegaDeskWeb.Pages.Desks.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "All Custom Quotes";
 }
 
-<h1>Index</h1>
+<h1>All Custom Quotes</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
 
-</p>
 <form>
     Search By Last Name:
     <input type="text" asp-for="SearchString" />
@@ -55,3 +52,7 @@
 }
     </tbody>
 </table>
+<p>
+    <a asp-page="Create">Create Your Own Quote</a>
+
+</p>
