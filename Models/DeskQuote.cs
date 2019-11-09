@@ -37,7 +37,7 @@ namespace MegaDeskWeb.Models
         [Display(Name="Quote Date")]
         [DataType(DataType.Date)]
         public DateTime QuoteDate { get; set; }
-
+        public int DeskPrice { get; set; }
         
     }
 }

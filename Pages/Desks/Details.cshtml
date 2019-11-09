@@ -60,12 +60,10 @@
             @Html.DisplayFor(model => model.DeskQuote.QuoteDate)
         </dd>
         <dt class="col-sm-2">
-            Quote Price
+            @Html.DisplayNameFor(model => model.DeskQuote.DeskPrice)
         </dt>
         <dd class="col-sm-10">
-           <!--Add new fields for total price here. -->
-            
-
+            @Html.DisplayFor(model => model.DeskQuote.DeskPrice)
         </dd>
     </dl>
 </div>

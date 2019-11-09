@@ -40,6 +40,9 @@ namespace MegaDeskWeb.Pages.Desks
             // Quote date for creating new quote
             DeskQuote.QuoteDate = DateTime.Now;
             
+            //Calculate the Desk Price
+            DeskQuote.DeskPrice = Program.CalcTotalPrice(DeskQuote.Width, DeskQuote.Depth, DeskQuote.Drawers, DeskQuote.RushOrderDays, DeskQuote.DeskMaterial);
+
             _context.DeskQuote.Add(DeskQuote);
             await _context.SaveChangesAsync();
 
