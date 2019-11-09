@@ -2,13 +2,13 @@
 @model MegaDeskWeb.Pages.Desks.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Your Quote Details";
 }
 
-<h1>Details</h1>
+<h1>Your Quote Details</h1>
 
 <div>
-    <h4>DeskQuote</h4>
+    <h4>Quote Details</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -68,6 +68,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.DeskQuote.DeskQuoteID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.DeskQuote.DeskQuoteID">Edit This Quote</a> |
+    <a asp-page="./Index">Return the Quotes</a>
 </div>
