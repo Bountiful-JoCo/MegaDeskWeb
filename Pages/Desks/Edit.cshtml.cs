@@ -47,6 +47,9 @@ namespace MegaDeskWeb.Pages.Desks
                 return Page();
             }
 
+            //Calculate the Desk Price
+            DeskQuote.DeskPrice = Program.CalcTotalPrice(DeskQuote.Width, DeskQuote.Depth, DeskQuote.Drawers, DeskQuote.RushOrderDays, DeskQuote.DeskMaterial);
+
             _context.Attach(DeskQuote).State = EntityState.Modified;
 
             try

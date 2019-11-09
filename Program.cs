@@ -25,11 +25,11 @@ namespace MegaDeskWeb
                 });
         
         //Calculation Variables
-        public int surfaceArea, surfaceAreaPrice, drawerPrice, surfacePrice, rushPrice, priceQuote;
-        public string rushCode;
-        int PRICE_PER_SQUARE_INCH = 1;
-        public int BASE_PRICE= 200;
-        public int PRICE_PER_DRAWER = 50;
+        public static int surfaceArea, surfaceAreaPrice, drawerPrice, surfacePrice, rushPrice, priceQuote;
+        public static string rushCode;
+        static int PRICE_PER_SQUARE_INCH = 1;
+        public static int BASE_PRICE= 200;
+        public static int PRICE_PER_DRAWER = 50;
 
         public enum SurfaceMaterial
         {
@@ -66,7 +66,7 @@ namespace MegaDeskWeb
             return priceQuote;
         }
 
-        public int GetSurfaceAreaPrice()
+        public static int GetSurfaceAreaPrice()
         {
             if (surfaceArea > 1000)
             {
@@ -79,7 +79,7 @@ namespace MegaDeskWeb
             return surfaceAreaPrice;
         }
 
-        public int GetRushPrice(string rushCode)
+        public static int GetRushPrice(string rushCode)
         {
             switch (rushCode)
             {

@@ -1,11 +1,58 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/*Body*/
+h1{
+    text-align:center;
+}
+h5 {
+    font-weight: bold;
+    color: brown;
+}
+#desks{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+ #desks td, #desks tr{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#desks tr:nth-child(even) { background-color: #F2F2F2;}
+
+#desks tr:hover{ background-color: #ddd;}
+
+#desks th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+
+}
+#desks th a{
+    color:#ddd;
+}
+
+.material{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10px;
+    
+}
+.welcome{
+    margin-top: 10px;
+    text-align:center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
+
 
 /* Provide sufficient contrast against white background */
 a {
@@ -23,6 +70,7 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -51,6 +99,7 @@ button.accept-policy {
   font-size: 1rem;
   line-height: inherit;
 }
+
 
 /* Sticky footer styles
 -------------------------------------------------- */

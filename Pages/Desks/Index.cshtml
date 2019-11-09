@@ -13,13 +13,13 @@
     <input type="text" asp-for="SearchString" />
     <input type="submit" value="Filter" />
 </form>
-<table class="table">
+<table class="table" id="desks">
     <thead>
         <tr>
             <th>
                 <a asp-page="./Index" asp-route-SortOrder="@Model.CustomerSort">
                     @Html.DisplayNameFor(model => model.DeskQuote[0].LastName)
-                    </a>
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].FirstName)
@@ -27,9 +27,15 @@
             <th>
                 <a asp-page="./Index" asp-route-SortOrder="@Model.DateSort">
                     @Html.DisplayNameFor(model => model.DeskQuote[0].QuoteDate)
-                    </a>
+                </a>
             </th>
-            <th></th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DeskQuote[0].DeskPrice)
+            </th>
+            <th>
+                Actions
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -43,6 +49,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.QuoteDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeskPrice)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.DeskQuoteID">Edit</a> |
